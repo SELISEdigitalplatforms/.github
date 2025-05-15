@@ -23,7 +23,7 @@ Here you'll find a curated collection of open-source libraries, integration SDKs
 🔗 Learn more:
 
 - 🌐 [SELISE Blocks Cloud](https://cloud.seliseblocks.com/)
-- 🎨 [SELISE Construct (UI Builder)](https://construct.seliseblocks.com/)
+- 🎨 [SELISE Blocks Construct](https://construct.seliseblocks.com/)
 
 ---
 
