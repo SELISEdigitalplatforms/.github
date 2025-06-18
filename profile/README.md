@@ -13,13 +13,13 @@ At SELISE, we believe that meaningful digital transformation is built on strong 
 ### 🔑 The Three Pillars of SELISE Engineering
 
 #### 🧭 Guideline  
-Our [Developer Guideline](https://github.com/SELISEdigitalplatforms/Wiki-BlocksGuideline-Developers/wiki) defines the standards, design patterns, and engineering best practices we follow across projects to ensure high-quality, maintainable software.
+We follow a robust set of engineering standards and best practices that ensure code quality, maintainability, and consistency across all our development projects. These guidelines serve as the blueprint for how we design and deliver digital solutions.
 
 #### 💻 Code  
-The [l3-react-blocks-construct](https://github.com/SELISEdigitalplatforms/l3-react-blocks-construct) repository represents our reference implementation for scalable front-end applications – empowering teams with clean architecture, reusable modules, and rapid development workflows.
+Our core development assets are structured into modular, scalable blueprints—enabling rapid full-stack development using clean architecture principles. These codebases act as the foundation for building composable and reusable enterprise-grade applications.
 
 #### ☁️ Cloud  
-Our [Cloud Management Guideline](https://github.com/SELISEdigitalplatforms/Wiki-BlocksGuideline-Cloud-Management/wiki) offers a structured approach to managing infrastructure, DevOps, and secure deployments across multi-cloud and hybrid environments.
+We embrace cloud-native strategies to manage infrastructure, CI/CD pipelines, and deployment workflows. Our cloud management approach emphasizes scalability, automation, and security across multi-cloud and hybrid environments.
 
 ---
 
