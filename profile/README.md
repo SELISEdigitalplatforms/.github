@@ -4,9 +4,26 @@ Welcome to the official GitHub home of **SELISE Digital Platforms**, a leading d
 
 Here you'll find a curated collection of open-source libraries, integration SDKs, and internal tools that power the digital ecosystems we help create – from scalable .NET microservices to domain-specific developer kits.
 
-### 🧩 At the heart of our engineering efforts is **[SELISE Blocks](https://cloud.seliseblocks.com)** – our powerful composable application platform that helps teams build, integrate, and scale enterprise-grade solutions faster than ever.
+---
+
+## 🏗️ Our Foundation
+
+At SELISE, we believe that meaningful digital transformation is built on strong principles. Our engineering philosophy is structured around three foundational pillars that guide how we build, operate, and scale digital solutions.
+
+### 🔑 The Three Pillars of SELISE Engineering
+
+#### 🧭 Guideline  
+Our [Developer Guideline](https://github.com/SELISEdigitalplatforms/Wiki-BlocksGuideline-Developers/wiki) defines the standards, design patterns, and engineering best practices we follow across projects to ensure high-quality, maintainable software.
+
+#### 💻 Code  
+The [l3-react-blocks-construct](https://github.com/SELISEdigitalplatforms/l3-react-blocks-construct) repository represents our reference implementation for scalable front-end applications – empowering teams with clean architecture, reusable modules, and rapid development workflows.
+
+#### ☁️ Cloud  
+Our [Cloud Management Guideline](https://github.com/SELISEdigitalplatforms/Wiki-BlocksGuideline-Cloud-Management/wiki) offers a structured approach to managing infrastructure, DevOps, and secure deployments across multi-cloud and hybrid environments.
 
 ---
+
+### At the heart of our engineering efforts is **[SELISE Blocks](https://cloud.seliseblocks.com)** – our powerful composable application platform that helps teams build, integrate, and scale enterprise-grade solutions faster than ever.
 
 ## 🧱 What is SELISE Blocks?
 
