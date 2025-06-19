@@ -1,8 +1,8 @@
 # 👋 Welcome to SELISE Digital Platforms on GitHub!
 
-Welcome to the official GitHub home of **SELISE Digital Platforms**, a leading digital engineering and business consulting company. We're passionate about building impactful software products and platforms for enterprises across industries such as Insurance, Finance, Retail, Logistics, and beyond.
+Welcome to the official GitHub home of **SELISE Digital Platforms**, a leading digital engineering and business consulting company. We're passionate about building impactful software products and platforms for enterprises across industries.
 
-Here you'll find a curated collection of open-source libraries, integration SDKs, and internal tools that power the digital ecosystems we help create – from scalable .NET microservices to domain-specific developer kits.
+Here you'll find a curated collection of open-source libraries, integration SDKs, and internal tools that power the digital ecosystems we help create – from scalable microservices to domain-specific developer kits.
 
 ---
 
@@ -12,7 +12,7 @@ At SELISE, we believe that meaningful digital transformation is built on strong 
 
 ### 🔑 The Three Pillars of SELISE Engineering
 
-#### 🧭 Guideline  
+#### 🧭 Guidelines  
 We follow a robust set of engineering standards and best practices that ensure code quality, maintainability, and consistency across all our development projects. These guidelines serve as the blueprint for how we design and deliver digital solutions.
 
 #### 💻 Code  
