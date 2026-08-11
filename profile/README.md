@@ -23,7 +23,7 @@ We embrace cloud-native strategies to manage infrastructure, CI/CD pipelines, an
 
 ---
 
-### At the heart of our engineering efforts is **[SELISE Blocks](https://cloud.seliseblocks.com)** – our powerful composable application platform that helps teams build, integrate, and scale enterprise-grade solutions faster than ever.
+### At the heart of our engineering efforts is **[SELISE Blocks](https://os.seliseblocks.com)** – our powerful composable application platform that helps teams build, integrate, and scale enterprise-grade solutions faster than ever.
 
 ## 🧱 What is SELISE Blocks?
 
@@ -39,8 +39,9 @@ We embrace cloud-native strategies to manage infrastructure, CI/CD pipelines, an
 
 🔗 Learn more:
 
-- 🌐 [SELISE Blocks Cloud](https://cloud.seliseblocks.com/)
+- 🌐 [SELISE Blocks OS](https://cloud.seliseblocks.com/)
 - 🎨 [SELISE Blocks Construct](https://construct.seliseblocks.com/)
+- 🌐 [SELISE Blocks Image Repository](https://hub.docker.com/u/blocksos/)
 
 ---
 
