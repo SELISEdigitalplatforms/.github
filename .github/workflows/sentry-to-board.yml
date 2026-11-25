@@ -1,0 +1,66 @@
+# Puts a new Sentry issue on the repo's project board, in the "Sentry Issues"
+# column. Called from each l3-ops-* repo when Sentry opens an issue there.
+#
+# Needs a GitHub App installed on the org with Projects read/write and Issues
+# read, passed in as its client ID and private key.
+name: Sentry issue to board
+
+on:
+  workflow_call:
+    inputs:
+      project-number:
+        description: Number of the org project (board) the issue goes on
+        required: true
+        type: number
+    secrets:
+      app-client-id:
+        required: true
+      app-private-key:
+        required: true
+
+permissions: {}
+
+jobs:
+  move:
+    runs-on: ubuntu-latest
+    steps:
+      - id: app-token
+        uses: actions/create-github-app-token@v3.3.0
+        with:
+          client-id: ${{ secrets.app-client-id }}
+          private-key: ${{ secrets.app-private-key }}
+          owner: ${{ github.repository_owner }}
+
+      - name: Add to board and set Status to Sentry Issues
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          OWNER: ${{ github.repository_owner }}
+          PROJECT: ${{ inputs.project-number }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+        run: |
+          set -euo pipefail
+          project_id=$(gh project view "$PROJECT" --owner "$OWNER" --format json --jq .id)
+          read -r field_id option_id < <(gh project field-list "$PROJECT" --owner "$OWNER" --format json \
+            --jq '.fields[] | select(.name == "Status") | "\(.id) \(.options[] | select(.name == "Sentry Issues") | .id)"')
+          if [ -z "${option_id:-}" ]; then
+            echo "::error::Project $PROJECT has no 'Sentry Issues' Status option"; exit 1
+          fi
+
+          item_id=$(gh project item-add "$PROJECT" --owner "$OWNER" --url "$ISSUE_URL" --format json --jq .id)
+
+          # The board's own "Item added to project" workflow sets its default
+          # Status shortly after an item is added and can overwrite ours, so
+          # set it, wait, and set it again if it was changed.
+          for attempt in 1 2 3; do
+            gh project item-edit --id "$item_id" --project-id "$project_id" \
+              --field-id "$field_id" --single-select-option-id "$option_id" > /dev/null
+            sleep 15
+            status=$(gh api graphql -f query='query($id: ID!) { node(id: $id) { ... on ProjectV2Item {
+                fieldValueByName(name: "Status") { ... on ProjectV2ItemFieldSingleSelectValue { optionId } } } } }' \
+              -f id="$item_id" --jq '.data.node.fieldValueByName.optionId')
+            if [ "$status" = "$option_id" ]; then
+              echo "Added $ISSUE_URL to project $PROJECT in Sentry Issues"; exit 0
+            fi
+            echo "Status was changed to something else after attempt $attempt, setting it again"
+          done
+          echo "::error::Could not keep $ISSUE_URL in Sentry Issues"; exit 1
